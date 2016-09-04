@@ -9,6 +9,7 @@ For this script to run successfully, you will need:
  * AWS EC2 Instance with IAM Role*
  * AWS CLI
  * Docker
+ * JQ
 
 ### IAM Role
 ```
