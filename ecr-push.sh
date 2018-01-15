@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-set -ex
+# Copyright (c) 2018, Said Sef. All rights reserved.
+# Use of this source code is governed by a MIT License that can be
+
+set -e
 
 if [ $# -lt 2 ]; then
 	echo "I need path and tag to complete successfully"
@@ -9,7 +12,7 @@ fi
 
 function usage {
     echo '''
-    
+
     Looks like permissions issue, try updating the IAM Role*:
     ```
     {
@@ -29,10 +32,10 @@ function usage {
             }
         ]
     }
-    
+
     ```
     By default ECR repositories do not have a policy. Once that's created and includes the permissions needed the issue should be resolved.
-    
+
     '''
     exit 1
 }
