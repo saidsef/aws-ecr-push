@@ -5,7 +5,7 @@ This script will build a Dockerfile in the root directory and then will push the
 ## Prerequisite
 
 For this script to run successfully, you will need:
- * Amazon AWS Account
+ * Amazon AWS Account - free tier
  * AWS EC2 Instance with IAM Role*
  * AWS CLI
  * Docker
