@@ -12,7 +12,6 @@ fi
 
 function usage {
     echo '''
-
     Looks like permissions issue, try updating the IAM Role*:
     ```
     {
@@ -35,7 +34,6 @@ function usage {
 
     ```
     By default ECR repositories do not have a policy. Once that's created and includes the permissions needed the issue should be resolved.
-
     '''
     exit 1
 }
@@ -50,6 +48,8 @@ if aws ecr get-login --region $REGION ; then
 
 aws ecr create-repository --repository-name $REPOSITORY_NAME --region $REGION
 aws ecr get-login --region $REGION | xargs -i -t sh -c '{}'
+
+docker version
 
 docker build -t $REPOSITORY_NAME .
 docker tag $REPOSITORY_NAME $ACCOUNT_ID.dkr.ecr.$REGION.amazonaws.com/$REPOSITORY_NAME:$TAG
