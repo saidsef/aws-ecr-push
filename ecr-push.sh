@@ -33,7 +33,7 @@ function usage {
     }
 
     ```
-    By default ECR repositories do not have a policy. Once that's created and includes the permissions needed the issue should be resolved.
+    By default ECR repositories do not have a policy. Once that''s created and includes the permissions needed the issue should be resolved.
     '''
     exit 1
 }
@@ -59,6 +59,6 @@ aws ecr describe-repositories --region $REGION | jq .repositories -r | grep "$RE
 
 else
 
-usage
+	usage
 
 fi
